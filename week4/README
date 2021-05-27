@@ -1,0 +1,119 @@
+Here will be described tasks of week 4
+part 1, task 1: part of vector
+
+Write a PrintVectorPart function that takes a vector of integers numbers, 
+searches for the first negative number in it, 
+and prints all the numbers to the left of the found number to standard output in reverse order. 
+If the vector does not contain negative numbers, print all numbers in reverse order. 
+
+part 1, task 2: part of the set
+
+Write a templated function FindGreaterElements that takes a set of elements objects of type T 
+and another border object of type T 
+and returns a vector of all the elements of the set greater than border in ascending order. 
+
+part 1, task 3: breaking into words
+
+Write a SplitIntoWords function that splits a string into words by spaces.
+
+It is guaranteed that:
+- the string is not empty;
+- the line consists only of Latin letters and spaces;
+- the first and last characters of the line are not spaces;
+- the line does not contain two spaces in a row. 
+
+
+part 2, task 1: removing repetitions
+Write a templated function RemoveDuplicates that takes a vector elements of objects of type T by reference 
+and removes all duplicate elements from it. The order of the remaining elements can be any.
+
+It is guaranteed that objects of type T can be compared using the operators ==,!=,<,>. 
+
+part 2, task 2: enumeration of permutations
+Given a positive integer N not exceeding 9. 
+Print all permutations of numbers from 1 to N in reverse lexicographic order 
+
+part 2, task 3: demographic indicators
+In this task, you need to calculate various demographic indicators for a group of people. 
+The person is represented by the Person structure:
+struct Person {
+  int age;
+  Gender gender;
+  bool is_employed;
+};
+The Gender type is defined as follows:
+enum class Gender {
+  FEMALE,
+  MALE
+};
+You need to write a PrintStats function that takes a vector of people, 
+calculates and prints the median age for each of the following groups of people:
+
+- all people;
+- all women;
+- all men;
+- all busy women;
+- all unemployed women;
+- all busy men;
+- all unemployed men.
+
+To calculate the median age of a group of people, you must use the ComputeMedianAge function: 
+You don’t need to implement this function yourself: we have implemented it for you and will automatically add it to each of your decisions. 
+
+part 2, task 4: merge sort by 2 and by 3
+Write a templated function MergeSort that takes two iterators of the template type RandomIt 
+and sorts the range they specify using merge sort. 
+It is guaranteed that:
+
+- iterators of the RandomIt type are similar in functionality to vector and string iterators, 
+  that is, they can be compared using the <, <=,> and> = operators, as well as subtracted and added with numbers;
+- sortable objects can be compared using the <operator. 
+
+part 3, task 1: finding the closest element
+Write a FindNearestElement function that, for a set of integers numbers and a given number border, 
+returns an iterator to the element of the set closest to border. 
+If there are multiple nearest elements, return the iterator to the smallest one. 
+
+part 3, task 3: grouping strings by prefix
+part1:
+Write the FindStartsWith function:
+- accepting a sorted set of strings as iterators range_begin, range_end and one prefix character;
+- returning a range of strings starting with the prefix character as a pair of iterators.
+- If the resulting range is empty, its bounds should point to the place in the container where any 
+line starting with the prefix character can be inserted without disturbing the sort order (similar to the equal_range algorithm). 
+- It is guaranteed that strings consist only of lowercase Latin letters and the prefix symbol is also a lowercase Latin letter.
+
+The search should be done at logarithmic complexity.
+part2:
+Write a more general version of the FindStartsWith function that accepts an arbitrary string consisting of lowercase Latin letters as a prefix. 
+
+part 3, task 4: building an arithmetic expression
+part 1
+Implement the construction of an arithmetic expression according to the following scheme:
+
+initially there is an expression consisting of some integer x;
+at each step, a certain operation is applied to the current expression: adding a number, subtracting a number, 
+multiplying by a number, or dividing by a number; the expression must always be enclosed in parentheses before applying the operation.
+Input format
+The first line contains the original integer x. The second line contains a non-negative integer N — the number of operations. 
+Each of the next N lines contains the next operation:
+
+adding the number a: + a;
+or subtracting the number b: - b;
+or multiplication by the number c: * c;
+or division by number d: / d.
+The number of operations can be zero - in this case, you must display the original number.
+
+Output format
+Output the only line - the constructed arithmetic expression.
+
+Pay attention to the placement of spaces around the characters:
+
+each binary operation character (+, -, * or /) must be surrounded by exactly one space on each side: (8) * 3;
+the unary minus symbol (for negative numbers) does not need an additional space: -5;
+parentheses and numbers don't need extra spaces.
+
+part 2. Without unnecessary parentheses
+Modify the solution of the previous part so that the previous expression is surrounded by parentheses only if necessary, 
+that is, only if the next operation has a higher priority than the previous one. 
+

@@ -1,0 +1,16 @@
+Here will be described tasks of week 3
+task 1: Implement the functions declared in the header file 
+You are given a header file sum_reverse_sort.h containing declarations of three functions.
+You need to send a cpp file containing the definitions of these functions.
+Functions must add two numbers, reverse the string, and sort the vector of numbers in ascending order, respectively. 
+
+task 2: Implement the class declared in the header file 
+You are given the phone_number.h header file containing the declaration of the PhoneNumber class. 
+At the same time, the comments describe the behavior that is expected from the implementation of this class.
+You need to send a cpp file with definitions of methods of the PhoneNumber class that implement the described behavior. 
+
+task 3: Write a class declaration 
+You are now given the complete definition of the Rectangle class.
+Send the header file rectangle.h containing the declaration for the Rectangle class. 
+This should be a complete header file that can be used in a large project. 
+In particular, it should solve the problem of double inclusion. 

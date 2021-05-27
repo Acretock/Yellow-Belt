@@ -1,0 +1,51 @@
+Here will be described tasks of week 5
+part 1, task 1: DIY inheritance 
+
+Define to the end of the class body, observing the following requirements:
+
+The Dog class must inherit from the Animal class.
+The Dog class constructor must take a string parameter and initialize it to the Name field in the Animal class. 
+
+part 2, task 1: Sending notifications 
+
+You need to develop the SmsNotifier and EmailNotifier classes that send SMS and e-mail notifications, respectively, and an abstract base class for them.
+You are given the SendSms and SendEmail functions, which simulate the sending of SMS and e-mail.
+
+Develop:
+
+1. An abstract base class INotifier, which will have one purely virtual method void Notify (const string & message).
+
+2. The SmsNotifier class, which:
+
+- is a descendant of the INotifier class;
+- in the constructor takes one parameter of the string type - the phone number;
+- overrides the Notify method and calls the SendSms function from it.
+
+3. The EmailNotifier class, which:
+
+- is a descendant of the INotifier class;
+- in the constructor takes one parameter of type string - an email address;
+- redefines the Notify method and calls the SendEmail function from it. 
+
+part 2, task 2: Set of figures 
+
+You are given the main function, which reads commands working with a set of geometric shapes from standard input.
+
+As you can see from the code, there are two kinds of commands:
+
+ADD - add a shape to the set;
+PRINT - for each shape in the set, print the name, perimeter and area.
+
+The program supports three types of shapes: rectangle, triangle and circle. Their addition is described as follows:
+
+ADD RECT width height - add a rectangle with dimensions width and height (for example, ADD RECT 2 3).
+ADD TRIANGLE a b c - add a triangle with sides a, b and c (for example, ADD TRIANGLE 3 4 5).
+ADD CIRCLE r - add a circle of radius r (for example, ADD CIRCLE 5).
+
+Without changing the main function, implement the missing functions and classes:
+
+base class Figure with purely virtual methods Name, Perimeter and Area;
+the Triangle, Rect and Circle classes, which inherit from the Figure class and override its virtual methods;
+the CreateFigure function, which, depending on the content of the input stream, creates a shared_ptr <Rect>, shared_ptr <Triangle>, or shared_ptr <Circle>.
+
+It is guaranteed that the sizes of all shapes are natural numbers no greater than 1000. Use 3.14 for the PI value. 

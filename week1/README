@@ -1,0 +1,81 @@
+Here will be described tasks of week 1
+part 1, task 1: average temperature
+
+Input format
+Enter the number N, then N integers - the temperature values ​​on the 0th, 1st, ... (N − 1) -th day. 
+It is guaranteed that N does not exceed a million (10 ^ 6);
+and temperatures, measured in parts per million degrees Celsius, range from -10 ^ 8 to 10 ^ 8. 
+There is no need to check whether these constraints are met: 
+you can rely on them when choosing the most appropriate types for variables.
+
+Output format
+The first number K is the number of days in which the temperature value is higher than the arithmetic mean. 
+Then K integers are the numbers of those days. 
+
+part 1, task 2: mass of blocks.
+
+Calculate the total mass of cuboid-shaped blocks of the same density but different sizes.
+
+Indication
+Consider block sizes in centimeters, density in grams per cubic centimeter, and total weight in grams. 
+Thus, the mass of a block can be calculated as a simple product of density and volume.
+
+Input format
+The first line contains two positive integers: the number of blocks N and the density of each block R. 
+Each of the next N lines contains three positive integers W, H, D - the sizes of the next block.
+
+It is guaranteed that:
+
+- the number of blocks N does not exceed 10 ^ 5;
+- the block density R does not exceed 100;
+- block sizes W, H, D do not exceed 10 ^ 4.
+
+part 2, task 1:Regions database.
+
+Given a database of regions, represented by a vector of structures Region (Lang is the language identifier)
+
+Write a FindMaxRepetitionCount function that takes a region database,
+and determines the maximum number of repetitions (the number of occurrences of the same element) it contains. 
+Two records (objects of type Region) are considered different if they differ in at least one field.
+
+If all records are unique, consider the maximum number of repetitions to be 1. 
+If there are no records, return 0. 
+It is guaranteed that int is sufficient to hold the response. 
+
+part 2, task 2: task tracker
+
+Implement the TeamTasks class to store statistics on the task statuses of the development team:
+The PerformPersonTasks method must implement the following algorithm:
+
+Let's take a look at all the outstanding tasks of the person developer.
+Let's sort them by statuses: first, all tasks in the NEW status, 
+then all tasks in the IN_PROGRESS status, and finally, tasks in the TESTING status.
+Let's consider the first task_count tasks and transfer each of them to the following status in accordance with the natural order:
+NEW → IN_PROGRESS → TESTING → DONE.
+Let's return a tuple of two elements: information about the statuses of the updated tasks (including those that ended up in the DONE status) 
+and information about the statuses of the remaining uncompleted tasks.
+If there is no developer named person, the PerformPersonTasks method should return a tuple of two empty TasksInfo
+
+It is guaranteed that task_count is positive. If task_count exceeds the current number of uncompleted tasks of the developer, 
+it is enough to assume that task_count is equal to the number of uncompleted tasks: 
+you do not need to update the status of any task twice in this case.
+
+In addition, it is guaranteed that the GetPersonTasksInfo method will not be called for a developer who has no tasks. 
+
+part 3, task 1: everything in squares.
+
+Implement a templated Sqr function that works not only for numbers but also for containers. 
+The function should return a copy of the original container, modifying it as follows:
+
+for vector, elements need to be squared;
+for map, only values need to be squared, not keys;
+for pair, you need to square each element of the pair.
+
+The function should work correctly not only for containers consisting of numbers, 
+but also for complex objects, for example, vectors of dictionaries of pairs of numbers. 
+
+part 3, task 2: object reference
+
+Implement the GetRefStrict templated function that takes as input: map and a key value k. 
+If there is no element by key k in the collection, then the function must throw a runtime_error exception; 
+otherwise return a reference to the element in the collection. 
